@@ -1,0 +1,32 @@
+<div class = "col-lg-4">
+                  <table class="table table-striped table-condensed table-hover table-responsive">
+                      <thead>
+    <tr>
+      <th>Wrzutka</th>
+      <th>Język</th>
+      <th>Opis</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+                    <tr class="success">
+                <td><span><%= raw Pygments.highlight(gist.snippet.length > 30 ? gist.snippet[0,30] + "..." : gist.snippet, lexer: gist.lang) %></span></td>
+                
+               <td> <span><%= gist.lang %></span></td>
+                
+                <td><span><%= gist.description %></span></td>
+
+               <td><div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Opcje <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#"><%= link_to 'Pokaż', gist %></a></li>
+    <li><a href="#"><%= link_to 'Edytuj', edit_gist_path(gist) %></a></a></li>
+    <li><a href="#"><%= link_to 'Usuń', gist, method: :delete, data: { confirm: 'Jesteś pewien, że chcesz usunąć wrzutkę?' } %></a></li>
+  </ul>
+</div></td>
+</tr>
+</table>
+</div>

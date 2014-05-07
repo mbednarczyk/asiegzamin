@@ -1,0 +1,58 @@
+@import "bootstrap";
+
+iframe{
+	height: 57px;
+}
+
+a{
+	color: greenyellow;
+}
+
+
+textarea{
+	width: 800px !important;
+	height: 350px !important;
+}
+
+@media screen and (max-width: 490px){
+	textarea{
+	width: 310px !important;
+	height: 150px !important;
+}
+pre{
+	width: 150px;
+	height: 150px;
+}
+}
+
+// select{
+// 	width: 800px !important;
+// }
+
+input.field{
+	width: 800px !important;
+}
+
+
+
+label{
+	text-align: center;
+}
+
+.highlight{
+	max-width: 800px !important;
+}
+
+#my-gists > .col-lg-4{
+background-color: #eee;
+}
+
+body{
+	background-color: #eee !important;
+}
+
+
+.navbar-text {
+margin-top: 0px;
+margin-bottom: 0px;
+}

@@ -1,0 +1,100 @@
+<%- model_class = Gist -%>
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand" href="/gists">Marek Bednarczyk - Lepsza wersja My gists</a>
+    <ul class="nav">
+      <li class="active"><a href="/gists">Home</a></li>
+      <li class="divider-vertical"></li>
+      <li><a href="/gists/new">Nowa wrzutka</a></li>
+      <li class="divider-vertical"></li>
+    </ul>
+    <ul class="nav pull-right hidden-xs">
+          <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
+          <div class="form-group">
+ 
+        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang]))%>
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+        
+        </ul>
+      </nav>
+  </div>
+</div>
+
+
+
+
+<!--     <nav role="navigation" class="navbar navbar-inverse">
+
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Marek Bednarczyk - Lepsza wersja My gists</a>
+        </div>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/gists">Home</a></li>
+                <li><a href="/gists/new">Nowa wrzutka</a></li>
+            </ul>
+                      <form class="navbar-form navbar-left pull-right" role="search" action="/gists/search">
+          <div class="form-group">
+ 
+        <%= select_tag(:lang, options_for_select(Pygments.lexers.keys.sort.map! {|l| l.downcase.strip}, params[:lang]))%>
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </nav>  -->
+
+
+
+
+<div id="infinite-scrolling" style="visibility: hidden;">
+  <%= will_paginate %>
+</div>
+
+<div id="my-gists">
+    <div class="jumbotron">
+            <div class="container">
+              <h1>Lista naszych wrzutek</h1>
+          <div class = "row">
+      <%= render @gists %>
+</div>
+</div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+        
+
+ <!-- .container -->
+
+ 
+     
+     <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-inner">
+          <p class="navbar-text pull-center"><%= facebook_like %></p>
+        </div>
+     </div>

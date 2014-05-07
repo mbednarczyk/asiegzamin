@@ -1,0 +1,39 @@
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand">Marek Bednarczyk - "Lepsza wersja My gists"</a>
+  </div>
+</div>
+
+<div class="jumbotron">
+            <div class="container">
+	<div class = "row">
+<div class = "col-lg-4">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Język</strong>
+  <%= @gist.lang %>
+</p>
+<table class="table table-striped table-condensed table-hover table-responsive">
+<thead><tr>
+<strong>Wrzutka:</strong>
+</tr>
+</thead>
+<tr><td>
+<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %></tr></td>
+</table>
+<p>
+  <strong>Opis:</strong>
+  <%= @gist.description %>
+</p>
+
+<div class="btn-group btn-group-xl">
+<button type="button" class="btn btn-default"><%= link_to 'Edytuj', edit_gist_path(@gist) %> </button>
+<button type="button" class="btn btn-default"><%= link_to 'Powrót', gists_path %> </button>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>

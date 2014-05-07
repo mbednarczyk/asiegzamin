@@ -1,0 +1,37 @@
+<%= form_for(@gist) do |f| %>
+<%
+allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
+allowed = allowed.map{|a| a[:aliases][0]}
+allowed = allowed.sort
+%>
+  <% if @gist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
+
+      <ul>
+      <% @gist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="field">
+
+    <%= f.label :Wrzutka %>
+    <%= f.text_area :snippet, :size => "80x10" %>
+  </div>
+  <div class="field" id="jj">
+    <%= f.label :Język %>
+    <%= f.select :lang, allowed %>
+  </div>
+  <div class="field">
+    <%= f.label :Opis %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Gotowe, style:"width: 100px;" %>
+  </div>
+
+<% end %>
