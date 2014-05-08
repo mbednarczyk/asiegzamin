@@ -7,7 +7,7 @@ describe "gists/edit.html.erb" do
 
   it "display header" do
     render
-    expect(rendered).to include("Editing gist")
+    expect(rendered).to include("Edytowanie wrzutki")
   end
 
   it "renders _form partial" do
