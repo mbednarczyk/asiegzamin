@@ -22,9 +22,13 @@
     Opcje <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
+    <% if current_user %>
     <li><a href="#"><%= link_to 'Pokaż', gist %></a></li>
     <li><a href="#"><%= link_to 'Edytuj', edit_gist_path(gist) %></a></a></li>
     <li><a href="#"><%= link_to 'Usuń', gist, method: :delete, data: { confirm: 'Jesteś pewien, że chcesz usunąć wrzutkę?' } %></a></li>
+    <% else %>
+    <li><a href="#"><%= link_to 'Pokaż', gist %></a></li>
+    <% end %>
   </ul>
 </div></td>
 </tr>
