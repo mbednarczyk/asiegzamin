@@ -1,7 +1,7 @@
 var delimiter =
 $('<div class="page-delimiter"  data-page="<%= params[:page] %>"></div>');
-$('#my-gists').append(delimiter);
-$('#my-gists').append('<%= j render @gists %>');
+$('.row').append(delimiter);
+$('.row').append('<%= j render @gists %>');
 $('.pagination').replaceWith('<%= j will_paginate @gists %>');
 preparePagination(delimiter);
 
