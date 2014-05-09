@@ -2,10 +2,10 @@ require 'spec_helper'
  
 describe "gists/show.html.erb" do
   # it "displays Lang data" do
-  #   assign(:gist, stub_model(Gist, lang: "ruby"))
+  #   assign(:gist, stub_model(Gist, language: "ruby"))
   #   render
-  #   expect(rendered).to include("Język:")
-  #   expect(rendered).to include("ruby")
+  #   # expect(rendered).to include("Język")
+  #   expect(rendered).to include("*")
   # end
  
   it "displays Snippet data" do
@@ -21,4 +21,6 @@ describe "gists/show.html.erb" do
     expect(rendered).to include("Opis:")
     expect(rendered).to include("some text")
   end
+
+
 end

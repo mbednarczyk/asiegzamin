@@ -38,19 +38,13 @@ describe "gists/edit.html.erb" do
   it "displays description data" do
     render
     expect(rendered).to include("Opis")
-    expect(rendered).to include("foo bar")
+    expect(rendered).to include("test")
   end
 
   it "displays snippet data" do 
     render
     expect(rendered).to include("Wrzutka")
     expect(rendered).to include("foo bar")
-  end
-
-  it "displays language" do 
-    render
-    expect(rendered).to include("ruby")
-    expect(rendered).to include("Język")
   end
 
   it "submit button existing" do
