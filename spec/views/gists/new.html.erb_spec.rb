@@ -9,6 +9,16 @@ describe "gists/new.html.erb" do
     render
     expect(rendered).to include("Nowa wrzutka")
   end
+
+  it "check existing language form" do
+    render
+    expect(rendered).to include("Język")
+  end
+
+  it "check existing language form" do
+    render
+    expect(rendered).to include("Opis")
+  end
  
   it "renders _form partial" do
     render
