@@ -6,4 +6,3 @@ rvm:
 
 # uncomment this line if your project needs to run something other than `rake`:
 script: bundle exec rspec spec
-script: bin/rake db:migrate RAILS_ENV=test
