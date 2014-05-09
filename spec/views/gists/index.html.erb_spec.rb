@@ -9,4 +9,14 @@ describe "gists/index.html.erb" do
   #   render
   #   expect(rendered).to include("foo")
   # end
+
+  # it "renders _gists partial" do
+  #   render
+  #   expect(view).to render_template(:partial => "_gist", :count => 1)
+  # end
+
+  # it "display facebook likes" do
+  #   render
+  #   expect(rendered).to include("Lista")
+  # end
 end
