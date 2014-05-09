@@ -2,7 +2,7 @@ require 'spec_helper'
  
 describe "gists/edit.html.erb" do
   before do
-    assign(:gist, stub_model(Gist, snippet: "foo bar"))
+    assign(:gist, stub_model(Gist, snippet: "foo bar", description: "test", language: "ruby"))
   end
  
   it "display header" do
@@ -26,13 +26,35 @@ describe "gists/edit.html.erb" do
   end
  
   it "displays Snippet data" do
-   
+    render
+    expect(rendered).to include("foo bar")
+  end
+
+  it "display description data" do
+    render
+    expect(rendered).to include("test")
   end
  
-  # it "displays description data" do
-  #   assign(:gist, stub_model(Gist, description: "some text"))
-  #   render
-  #   expect(rendered).to include("Description:")
-  #   expect(rendered).to include("some text")
-  # end
+  it "displays description data" do
+    render
+    expect(rendered).to include("Opis")
+    expect(rendered).to include("foo bar")
+  end
+
+  it "displays snippet data" do 
+    render
+    expect(rendered).to include("Wrzutka")
+    expect(rendered).to include("foo bar")
+  end
+
+  it "displays language" do 
+    render
+    expect(rendered).to include("ruby")
+    expect(rendered).to include("Język")
+  end
+
+  it "submit button existing" do
+    render
+    expect(rendered).to include("submit")
+  end
 end

@@ -19,4 +19,20 @@ describe GistsController do
       expect(assigns(:gists)).to match_array([gist1, gist2])
     end
   end
+
+  describe "GET #new" do
+    it "responds successfully with an Http 2000 status code" do
+      get :new
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+
+    it "renders the new page template" do
+      get :new
+      expect(response).to render_template("new")  
+    end
+
+  end
+
+  
 end
