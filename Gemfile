@@ -70,7 +70,7 @@ group :development, :test do
 end
 
 group :deployment do
-gem 'jwt-0.1.12'
+gem 'jwt'
 	end
 
 #autentykacja przez gita
