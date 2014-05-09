@@ -69,5 +69,9 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :deployment do
+gem 'jwt-0.1.12'
+	end
+
 #autentykacja przez gita
 gem 'omniauth-github'
