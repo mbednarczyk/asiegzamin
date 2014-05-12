@@ -34,5 +34,18 @@ describe GistsController do
 
   end
 
+  describe "GET #search" do
+    it "Gists responds successfully with an Http 2000 status code" do
+      get :search
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+
+    it "renders the new page template" do
+      get :search
+      expect(response).to render_template("search")  
+    end
+  end
+
   
 end
