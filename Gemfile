@@ -62,6 +62,7 @@ gem 'quiet_assets'
 group :production do
     gem 'pg'
     gem 'rails_12factor', '0.0.2'
+    gem 'shelly-dependencies'
 end
 
 
@@ -75,3 +76,5 @@ end
 
 #autentykacja przez gita
 gem 'omniauth-github'
+
+gem 'thin'
