@@ -1,5 +1,6 @@
 require "spec_helper"
 
+
 describe GistsController do
   describe "GET #index" do
     it "responds successfully with an HTTP 200 status code" do
@@ -33,6 +34,54 @@ describe GistsController do
     end
 
   end
+
+  describe "GET #search" do
+    it "Gists responds successfully with an Http 2000 status code" do
+      get :search
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+
+    it "renders the new page template" do
+      get :search
+      expect(response).to render_template("search")  
+    end
+
+    it "renders the new page template" do
+      get :search
+      expect(response).to render_template("search")  
+    end
+
+  end
+
+  describe "#new Gist-two params" do
+    it "takes two parameters and returns a Gist object" do
+      @gist = Gist.new  "", ""
+      @gist.should be_an_instance_of Gist
+    end
+end
+
+  describe "#new Gist-one params" do
+    it "takes one parameter and returns a Gist object" do
+      @gist = Gist.new  ""
+      @gist.should be_an_instance_of Gist
+    end
+end
+
+  describe "#new Gist-no params" do
+      it "takes no parameters and returns a Gist object" do
+        @gist = Gist.new  
+        @gist.should be_an_instance_of Gist
+      end
+  end
+
+  #describe "POST #create" do
+  #  it "Gists responds successfully with an Http 2000 status code" do
+  #    post :create, gists: {lang => '', description => ''}
+  #    expect(response).to be_success
+  #    expect(response.status).to eq(200)
+  #  end
+  #end
 
   
 end
