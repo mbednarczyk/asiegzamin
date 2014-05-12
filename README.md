@@ -1,6 +1,7 @@
 Aplikacja egzaminacyjna z przedmiotu Architektura serwisów internetowych.
 ==========
 <img src="https://travis-ci.org/mbednarczyk/asiegzamin.svg?branch=master" alt="Build Status" />
+Nasza aplikacja wdrożona na ShellyCloud: http://asiegzamin.shellyapp.com/
 ###GITPower Team: 
 - Marek Bednarczyk
 - Maciej Kucharski
