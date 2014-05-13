@@ -5,7 +5,7 @@ asiegzamin:
     - asiegzamin.shellyapp.com
   servers:
     app1:
-      size: large
+      size: small
       thin: 4
       # delayed_job: 1
       # sidekiq: 1
