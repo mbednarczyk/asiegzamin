@@ -34,7 +34,7 @@ allowed = allowed.sort
     <div class="field">
       <% if current_user %>
     <%= f.label :Autor %>
-    <%= f.text_field :autor, placeholder: current_user %>
+    <%= f.text_field :autor, placeholder: current_user.name %>
     <% else %>
     <%= f.label :Autor %>
     <%= f.text_field :autor, placeholder: 'niezalogowany' %>
