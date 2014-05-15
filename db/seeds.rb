@@ -14,7 +14,8 @@ for i in 0..25
 		margin-top: 20px;
 	}',
       lang: "css",
-      description: "test"
+      description: "test",
+      autor: "testowy"
   )
 end
 
