@@ -75,6 +75,13 @@ end
       end
   end
 
+  #describe "#hasMethod Gist" do
+  #    it "Gist has method edit" do
+  #      @gist = Gist.new  
+  #      GistsController.should respond_to show
+  #    end
+  #end
+
   #describe "POST #create" do
   #  it "Gists responds successfully with an Http 2000 status code" do
   #    post :create, gists: {lang => '', description => ''}
