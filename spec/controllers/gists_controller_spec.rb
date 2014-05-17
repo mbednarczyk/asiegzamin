@@ -54,6 +54,30 @@ describe GistsController do
 
   end
 
+  describe "GET #update" do  
+
+  before :each do 
+      @gist = FactoryGirl.create(:gist) 
+  end 
+
+    it "update gist" do
+      @attr = { :snippet => "new snippet", :lang => "c++" , :description => "sad language" }
+      put :update, :id => @gist.id, :gist => @attr
+          
+      @gist.reload 
+      @gist.description.should eq("sad language") 
+    end
+
+    it "redirect to gists after edit" do
+      @attr = { :snippet => "div div div", :lang => "html" , :description => "easy man" }
+      put :update, :id => @gist.id, :gist => @attr
+          
+      @gist.reload 
+      expect(response).to redirect_to "/gists/"+@gist.id.to_s
+    end
+
+  end
+
   #describe "#hasMethod Gist" do
   #    it "Gist has method edit" do
   #      @gist = Gist.new  

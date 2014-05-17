@@ -6,6 +6,4 @@ def self.search(search)
        limit(0)
      end
    end
-   def cokolwiek
-   end
 end
