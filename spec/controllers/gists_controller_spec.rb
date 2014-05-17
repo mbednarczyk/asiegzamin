@@ -54,11 +54,25 @@ describe GistsController do
 
   end
 
-  describe "GET #update" do  
-
-  before :each do 
+  describe "CRUD tests" do
+    before :each do 
       @gist = FactoryGirl.create(:gist) 
   end 
+
+  describe "POST #create" do 
+   
+   it "renders to show with particular gist" do 
+      get :show, id: @gist
+      response.should render_template :show 
+   end
+   
+   it "redirects to created gist page" do
+      post :create, gist: FactoryGirl.attributes_for(:gist)
+      expect(response).to redirect_to "/gists/2" 
+    end
+  end
+
+  describe "GET #update" do  
 
     it "update gist" do
       @attr = { :snippet => "new snippet", :lang => "c++" , :description => "sad language" }
@@ -75,8 +89,17 @@ describe GistsController do
       @gist.reload 
       expect(response).to redirect_to "/gists/"+@gist.id.to_s
     end
-
   end
+
+  describe "POST #delete" do  
+    it "remove gist" do
+        expect do
+          delete :destroy, id: @gist
+        end.to change(Gist, :count).by(-1)
+      end
+    end
+  end
+end
 
   #describe "#hasMethod Gist" do
   #    it "Gist has method edit" do
@@ -93,5 +116,3 @@ describe GistsController do
   #  end
   #end
 
-  
-end
