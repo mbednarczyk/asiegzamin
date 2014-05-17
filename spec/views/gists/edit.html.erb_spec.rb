@@ -51,4 +51,16 @@ describe "gists/edit.html.erb" do
     render
     expect(rendered).to include("submit")
   end
+  it "show button have correct text" do
+    render
+    expect(rendered).to include("Pokaż")
+  end
+  it "back button have correct text" do
+    render
+    expect(rendered).to include("Powrót")
+  end
+  it "submit button have correct text" do
+    render
+    expect(rendered).to include("Gotowe")
+  end
 end
