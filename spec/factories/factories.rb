@@ -7,5 +7,7 @@ FactoryGirl.define do
 
   factory :invalid_gist, parent: :gist do 
     snippet nil 
+    lang nil 
+    description nil 
   end 
 end 

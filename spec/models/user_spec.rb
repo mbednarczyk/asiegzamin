@@ -23,4 +23,11 @@ describe User do
       end
   end
 
+  it "should allow login" do
+	    @user = FactoryGirl.create(:user)
+	    auth = mock_auth_hash
+	    tested_user = User.from_omniauth(auth)
+	    expect(tested_user.name).to eq(@user.name)
+	end
+
 end

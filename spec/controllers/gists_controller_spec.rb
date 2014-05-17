@@ -72,6 +72,7 @@ describe GistsController do
     end
   end
 
+
   describe "GET #update" do  
 
     it "update gist" do
@@ -98,6 +99,13 @@ describe GistsController do
         end.to change(Gist, :count).by(-1)
       end
     end
+
+   it "redirects to the gist list" do
+
+      delete :destroy, id: @gist
+      response.should redirect_to("/gists")
+    end
+
   end
 end
 
@@ -113,6 +121,15 @@ end
   #    post :create, gists: {lang => '', description => ''}
   #    expect(response).to be_success
   #    expect(response.status).to eq(200)
+  #  end
+  #end
+
+  # context "invalid attributes" do
+  #
+  #  it "not saved invalid gist" do
+  #    expect do
+  #      post :create, gist: FactoryGirl.attributes_for(:invalid_gist)
+  #    end.not_to change(Gist, :count)
   #  end
   #end
 
