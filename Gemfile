@@ -78,4 +78,6 @@ end
 #autentykacja przez gita
 gem 'omniauth-github'
 
+gem 'omniauth-facebook'
+
 gem 'thin'

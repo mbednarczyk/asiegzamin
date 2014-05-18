@@ -22,12 +22,13 @@
                 <% if current_user %>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <strong><%= current_user.name %><b class="caret"></b></strong></a>
                     <ul class="dropdown-menu">
-                        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+                        <li><%= link_to "Wyloguj", signout_path, id: "sign_out" %></li>
                     </ul>
                 <% else %>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zaloguj<b class="caret"></b></strong></a>
                     <ul class="dropdown-menu">
-                        <li><%= link_to "Sign in with GitHub", "/auth/github", id: "sign_in" %></li>
+                        <li><%= link_to "Zaloguj via GitHub", "/auth/github", id: "sign_in" %></li>
+                        <li><%= link_to "Zaloguj via Facebook", "/auth/facebook", id: "sign_in" %></li>
                     </ul>
                 <% end %>
             </li>
