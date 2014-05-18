@@ -8,7 +8,7 @@ Aplikacja egzaminacyjna z przedmiotu Architektura serwisów internetowych.
 - Jan Kąkol
 
 ##Link do appki
-Nasza aplikacja wdrożona na ShellyCloud: http://asiegzamin.shellyapp.com/
+Nasza aplikacja wdrożona na [ShellyCloud](http://asiegzamin.shellyapp.com/)
 
 ##Funkcjonalności
 Aplikacja opiera się na funkcjonalnościach CRUD (dodawanie, usuwanie, edytowanie i odczytywanie wrzutek).
