@@ -36,7 +36,7 @@ allowed = allowed.sort
     <%= f.label :Autor %>
     <%= f.text_field :autor, placeholder: current_user.name, visiblity: 'hidden', value: current_user.name, readonly: true, style:'visibility:hidden;' %>
     <% else %>
-    <%= f.label :Autor, style:'visibility:hidden;' %>
+    <%= f.label :Autor, style:'visibility:hidden; ' %>
     <%= f.text_field :autor, placeholder: 'niezalogowany', value: 'Niezalogowany użytkownik', readonly:true, style:'visibility:hidden;' %>
     <% end %>
   </div>
