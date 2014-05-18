@@ -6,8 +6,8 @@ describe "gists/index.html.erb" do
   end
  
   # it "displays header" do
-  #   #render
-  #   #expect(rendered).to include("Lista naszych wrzutek")
+  #   render
+  #   expect(rendered).to include("Lista naszych wrzutek")
   # end
 
   # it "renders _gists partial" do
