@@ -44,5 +44,4 @@ Do aplikacji zostały dopisane testy:
 - modeli,
 - kontrolerów
 
-Małe info co do travisa, nie wiem dlaczego ale gdy odkomentuje linijke, która niby ma wykonywać testy na travisie, to budowanie aplikacji kończy się failem - bo jakaś tam komenda jest jeszcze potrzebna. Zakomentowałem to linie, budowanie appki przechodzi bez problemowo -  a co najdziwniejsze, testy również są wykonywane i przechodzą bez problemów. 
-Tak więc Travis CI - sick!
+
