@@ -1,7 +1,9 @@
 Chleb::Application.routes.draw do
 
 get "gists/search"
-  resources :gists
+  resources :gists do
+    resources :comments
+  end
   root 'gists#index'
 
 

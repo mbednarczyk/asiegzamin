@@ -26,6 +26,51 @@
   <strong>Opis:</strong>
   <%= @gist.description %>
 </p>
+<p>
+   <strong>Autor:</strong>
+   <%= @gist.autor %>
+ </p>
+
+<h2>Comments</h2>
+<% @gist.comments.each do |comment| %>
+  <p>
+    <%= comment.commenter %>: <%= comment.body %> <%= link_to 'Destroy Comment', [comment.gist, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
+  
+<% end %>
+
+      <% if current_user %>
+<h2>Add a comment:</h2>
+<%= form_for([@gist, @gist.comments.build]) do |f| %>
+  <p>
+    <% if current_user %>
+    <%= f.label :commenter %>
+    <%= f.text_field :commenter, placeholder: current_user.name, visiblity: 'hidden', value: current_user.name, readonly: true, style:'visibility:hidden;' %>
+     <% else %>
+     <%= f.label :commenter, style:'visibility:hidden;' %>
+     <%= f.text_field :commenter, placeholder: 'niezalogowany', value: 'Niezalogowany użytkownik', readonly:true, style:'visibility:hidden;' %>
+     <% end %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
 
 <div class="btn-group btn-group-xl">
 

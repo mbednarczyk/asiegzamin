@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515102809) do
+ActiveRecord::Schema.define(version: 20140519133823) do
 
   create_table "authorizations", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comments", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "gist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["gist_id"], name: "index_comments_on_gist_id"
 
   create_table "gists", force: true do |t|
     t.text     "snippet"
