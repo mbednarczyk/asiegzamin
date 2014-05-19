@@ -5,4 +5,4 @@ rvm:
 bundler_args: --without production
 
 script: 
-  - bin/rake db:migrate RAILS_ENV=test
+  - rake db:migrate RAILS_ENV=test
