@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - "2.1.0"
   - "2.1.1"
+bundler_args: --without production
 
 script: 
-  - "bin/rake db:migrate RAILS_ENV=test"
+  - bin/rake db:migrate RAILS_ENV=test
