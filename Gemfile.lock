@@ -198,7 +198,7 @@ DEPENDENCIES
   rails (= 4.1.1)
   rails_12factor (= 0.0.2)
   redcarpet
-  rspec-rails
+  rspec-rails (= 2.14.2)
   sass-rails (~> 4.0.0)
   sdoc
   shelly-dependencies

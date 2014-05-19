@@ -41,27 +41,22 @@
   
 <% end %>
 
-      <% if current_user %>
 <h2>Add a comment:</h2>
 <%= form_for([@gist, @gist.comments.build]) do |f| %>
   <p>
-    <% if current_user %>
-    <%= f.label :commenter %>
-    <%= f.text_field :commenter, placeholder: current_user.name, visiblity: 'hidden', value: current_user.name, readonly: true, style:'visibility:hidden;' %>
-     <% else %>
-     <%= f.label :commenter, style:'visibility:hidden;' %>
-     <%= f.text_field :commenter, placeholder: 'niezalogowany', value: 'Niezalogowany użytkownik', readonly:true, style:'visibility:hidden;' %>
-     <% end %>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
   </p>
   <p>
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body %>
   </p>
   <p>
     <%= f.submit %>
   </p>
 <% end %>
-<% end %>
+
+
 
 
 
