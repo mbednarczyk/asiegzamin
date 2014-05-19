@@ -21,8 +21,9 @@ Aplikacja opiera się na funkcjonalnościach CRUD (dodawanie, usuwanie, edytowan
 - Wyszukiwanie wrzutek po języku programowania,
 - Responsive web desing,
 - Nowe:
-  - Możliwość logowania się do aplikacji poprzez konta na Githubie oraz Facebooku
+  - Możliwość logowania się do aplikacji poprzez konta na Githubie oraz Facebooku,
   - Każda wrzutka posiada swojego autora: jeśli użytkownik się zaloguje w pole 'autor' trafia jego nazwa z gita lub fb, jeśli wrzutke dodaje użytkownik niezalogowany w pole 'autor' trafia napis "Niezalogowany użytkownik",
+  - dodawanie komentarzy pod każdą wrzutką(tylko zalogowany użytkownik może dodawać gisty, niezalogowany użytkownik może je tylko widzieć),
 - Ograniczenie długości wyświetlanej nazwy autora na głownym widoku (zapobiega to niszczeniu wyglądu)
 
 ##Użyte gemy (dodatkowe)
