@@ -23,7 +23,7 @@ Aplikacja opiera się na funkcjonalnościach CRUD (dodawanie, usuwanie, edytowan
 - Nowe:
   - Możliwość logowania się do aplikacji poprzez konta na Githubie oraz Facebooku,
   - Każda wrzutka posiada swojego autora: jeśli użytkownik się zaloguje w pole 'autor' trafia jego nazwa z gita lub fb, jeśli wrzutke dodaje użytkownik niezalogowany w pole 'autor' trafia napis "Niezalogowany użytkownik",
-  - dodawanie komentarzy pod każdą wrzutką(tylko zalogowany użytkownik może dodawać gisty, niezalogowany użytkownik może je tylko widzieć),
+  - dodawanie komentarzy pod każdą wrzutką(tylko zalogowany użytkownik może dodawać komentarze - jego 'name' z fb lub gita jest wykorzystywany jako 'autor' komentarza, niezalogowany użytkownik może je tylko widzieć),
 - Ograniczenie długości wyświetlanej nazwy autora na głownym widoku (zapobiega to niszczeniu wyglądu)
 
 ##Użyte gemy (dodatkowe)
